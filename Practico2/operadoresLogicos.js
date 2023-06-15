@@ -13,6 +13,6 @@ else if (numeroUsuario>0 && numeroUsuario%2!==0)
 else if(numeroUsuario<0){
     console.log ("El numero es Negativo")
 }
-else if(numeroUsuario===0){
+else if(numeroUsuario==0){
     console.log ("El numero es 0")
 }
