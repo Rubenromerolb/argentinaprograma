@@ -25,3 +25,18 @@ for (let i = 0; i<= rechazados.length-1; i++)
 {
     console.log(rechazados[i])
 }
+
+//Extra
+console.log ("\nLa lista ordenada de invitados admitidos es:")
+admiditos=admitidos.sort()
+for (let i = 0; i<= admitidos.length-1; i++)
+{
+    console.log(admitidos[i])
+}
+
+console.log ("\nLa lista ordenada de invitados rechazados es:")
+rechazados=rechazados.sort()
+for (let i = 0; i<= rechazados.length-1; i++)
+{
+    console.log(rechazados[i])
+}
