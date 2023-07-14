@@ -1,5 +1,6 @@
 const readlineSync= require("readline-sync");
 let eleccion = ["piedra","papel","tijeras"]
+
 var min = 0;
 var max = 3;
 
@@ -63,18 +64,12 @@ function determinarGanador(usuario,computadora)
 }
 
 
-console.log("read...")
 let jugadaComputadora = obtenerJugadaComputadora()
-console.log("read...2",jugadaComputadora)
 let numeroUsuario= readlineSync.question("Piedra(0), Papel(1) o Tijeras(2)...\n")
-console.log("read...3",numeroUsuario)
 let jugadaUsuario= obtenerJugadaUsuario(numeroUsuario)
-console.log("read...4",jugadaUsuario)
 
 let resultado= determinarGanador(jugadaUsuario,jugadaComputadora)
 
 console.log("La computadora eligio:",jugadaComputadora)
 console.log("El usuario eligio:",jugadaUsuario)
 console.log("El resultado fue:",resultado)
-
-
