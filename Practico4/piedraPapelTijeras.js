@@ -1,27 +1,27 @@
 const readlineSync= require("readline-sync");
-
+let eleccion = ["piedra","papel","tijeras"]
 var min = 0;
 var max = 3;
 
 //Math.floor((Math.random()*max-min)+min)
 
-function obtenerJugadaUsuario(eleccion)
+function obtenerJugadaUsuario(jugada)
 {
-    switch(eleccion)
+    switch(jugada)
     {
         case "0":
             {
-                return "piedra";
+                return eleccion[0];
                 break;
             }
         case "1":
             {
-                return "papel";
+                return eleccion[1];
                 break;
             }
         case "2":
             {
-                return "tijeras";
+                return eleccion[2];
                 break;
             }
     }
@@ -34,29 +34,29 @@ function obtenerJugadaComputadora()
 
 function determinarGanador(usuario,computadora)
 {
-    if (usuario==="piedra")
+    if (usuario===eleccion[0])
     {
-        if (computadora==="piedra")
+        if (computadora===eleccion[0])
         {return "Empate"}
-        else if(computadora==="tijeras")
+        else if(computadora===eleccion[2])
         {return "Gana el usuario"}
         else{return "Gana la computadora"}
     }
 
-    if (usuario==="papel")
+    if (usuario===eleccion[1])
     {
-        if (computadora==="papel")
+        if (computadora===eleccion[1])
         {return "Empate"}
-        else if(computadora==="piedra")
+        else if(computadora===eleccion[0])
         {return "Gana el usuario"}
         else{return "Gana la computadora"}
     }
 
-    if (usuario==="tijeras")
+    if (usuario===eleccion[2])
     {
-        if (computadora==="tijeras")
+        if (computadora===eleccion[2])
         {return "Empate"}
-        else if(computadora==="papel")
+        else if(computadora===eleccion[1])
         {return "Gana el usuario"}
         else{return "Gana la computadora"}
     }
